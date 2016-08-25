@@ -1,0 +1,144 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Global Entry</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+	<script>
+	$(document).ready(function(){
+    $(".hideConvictionNumber").click(function(){
+        $("#convictionNumberWrapper").hide();
+    });
+    $(".showConvictionNumber").click(function(){
+        $("#convictionNumberWrapper").show();
+    });
+
+		$(".hideconviction10Years").click(function(){
+				$("#conviction10Years").hide();
+		});
+		$(".showconviction10Years").click(function(){
+				$("#conviction10Years").show();
+		});
+		$("#criminalConvictionNo").click(function(){
+				$('#convictionNumberNo').attr('checked', false)
+				$('#conviction10YearsNo').attr('checked', false)
+				$('#convictionNumberYes').attr('checked', false)
+				$('#conviction10YearsYes').attr('checked', false)
+				$("#conviction10Years").hide();
+		});
+		$("#convictionNumberYes").click(function(){
+				$('#conviction10YearsNo').attr('checked', false)
+				$('#conviction10YearsYes').attr('checked', false)
+		});
+});
+</script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+		<div data-includefile="banner-beta"></div>
+
+<!-- DELETE FROM HERE -->
+<br>
+<header class="page-header-sub">
+	<span class="section-number">Section 1 of 2</span>
+</header>
+<br>
+<fieldset class="inline">
+<div class="form-group">
+	<h1 class="form-label-bold label">Your name</h1>
+	<p data-lang="eng" class="form-hint">Write your full name, as written in your passport</p>
+</div>
+
+<div class="form-group">
+	<label class="form-label-bold small-bold label" for="first-middle-names">First and middle names</label>
+	<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+</div>
+
+<div class="form-group">
+	<label class="form-label-bold small-bold label" for="last-name">Last name</label>
+	<input type="text" class="form-control" id="last-name" name="last-name" />
+</div>
+</fieldset>
+ <!-- <div class="form-group">
+	<fieldset class="inline" id="criminalConviction">
+		<label class="form-label-bold label" data-label="Criminal conviction">What is your full name as it is written in your passport?</label>
+		<p data-lang="eng" class="form-hint">Enter the flight that arrives in the UK</p>
+		<input type="text" class="form-control" id="flight-number" name="flight-number" />
+
+		<label class="form-label-bold label" data-label="Criminal conviction">What is your full name as it is written in your passport?</label>
+		<p data-lang="eng" class="form-hint">Enter the flight that arrives in the UK</p>
+		<input type="text" class="form-control" id="flight-number" name="flight-number" />
+	</fieldset>
+</div>
+
+	<div class="form-group">
+		<fieldset class="inline" id="criminalConviction">
+			<label class="form-label-bold label" data-label="Criminal conviction">What is your full name as it is written in your passport?</label>
+			<label class="form-hint">You don’t need to tell us about motoring fines or penalty points unless these were court imposed.</label>
+			<div class="radio-wrapper">
+				<input type="radio" id="criminalConvictionYes" name="criminalConviction" value="Yes" tabindex="1" class="showConvictionNumber">
+				<label class="block-label" for="criminalConvictionYes">Yes</label>
+			</div>
+			<div class="radio-wrapper">
+	      <input type="radio" id="criminalConvictionNo" name="criminalConviction" value="No" tabindex="2" class="hideConvictionNumber" data-button-page="continue.html" data-button-id="#continuebutton">
+	      <label class="block-label" for="criminalConvictionNo">No</label>
+	    </div>
+		</fieldset>
+	</div>
+
+<fieldset id="convictionNumberWrapper" class="fieldsetpadding" style="display: none">
+
+	<fieldset class="inline panel-indent" id="convictionNumber">
+		<label class="form-label-bold label" data-label="Conviction number">Have you had more than 1 conviction (including police cautions and spent convictions)?</label>
+		<div class="radio-wrapper">
+			<input type="radio" id="convictionNumberYes" name="convictionNumber" value="Yes" tabindex="1" class="hideconviction10Years" data-button-page="exit.html" data-button-id="#continuebutton">
+			<label class="block-label" for="convictionNumberYes">Yes</label>
+		</div>
+		<div class="radio-wrapper">
+      <input type="radio" id="convictionNumberNo" name="convictionNumber" value="No" tabindex="2" class="showconviction10Years">
+      <label class="block-label" for="convictionNumberNo">No</label>
+    </div>
+	</fieldset>
+
+	<fieldset class="inline panel-indent" id="conviction10Years" style="display: none">
+		<label class="form-label-bold label" data-label="Conviction 10years">Was the conviction within the last 10 years?</label>
+		<div class="radio-wrapper">
+			<input type="radio" id="conviction10YearsYes" name="conviction10Years" value="Yes" tabindex="1" data-button-page="exit.html" data-button-id="#continuebutton">
+			<label class="block-label" for="conviction10YearsYes">Yes</label>
+		</div>
+		<div class="radio-wrapper">
+      <input type="radio" id="conviction10YearsNo" name="conviction10Years" value="No" tabindex="2" data-button-page="maybe.html" data-button-id="#continuebutton">
+      <label class="block-label" for="conviction10YearsNo">No</label>
+    </div>
+	</fieldset>
+
+</fieldset> -->
+
+	<div class="form-group">
+		<a class="button" href="changed-name.html" id="continuebutton">Continue</a>
+	</div>
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>

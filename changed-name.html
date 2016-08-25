@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Global Entry</title>
+	<meta name="Copyright" content="Open Government Licence v3.0, except where otherwise stated" />
+	<!--[if gt IE 8]><!--><link href="govuk-assets/stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+	<!--[if IE 6]><link href="govuk-assets/stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link href="govuk-assets/stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 8]><link href="govuk-assets/stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/form.storage.js"></script>
+	<script type="text/javascript" src="scripts/application.js"></script>
+	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css"/>
+	<script>
+	$(document).ready(function(){
+    $(".hidePreviousName1").click(function(){
+        $("#previousName1").hide();
+				$("#previousName2").hide();
+				$("#previousName3").hide();
+    });
+    $(".showPreviousName1").click(function(){
+        $("#previousName1").show();
+    });
+		$(".hidePreviousName2").click(function(){
+				$("#previousName2").hide();
+		});
+		$(".showPreviousName2").click(function(){
+				$("#previousName2").show();
+		});
+		$(".showPreviousName3").click(function(){
+				$("#previousName3").show();
+		});
+		$(".hidePreviousName1B").click(function(){
+				$("#previousName1").hide();
+				$('#changedNameYes').attr('checked', false)
+		});
+		$(".hidePreviousName2B").click(function(){
+				$("#previousName2").hide();
+		});
+		$(".hidePreviousName3B").click(function(){
+				$("#previousName3").hide();
+		});
+		$(".hidePreviousName1B").click(function(){
+		});
+	});
+</script>
+</head>
+<body>
+
+	<header data-includefile="header"></header>
+	<main id="content">
+		<div data-includefile="banner-beta"></div>
+
+	<!-- DELETE FROM HERE -->
+	<br>
+	<header class="page-header-sub">
+	<span class="section-number">Section 2 of 2</span>
+	</header>
+	<br>
+	<div class="form-group" data-group-name="passportNationality">
+	<fieldset class="inline" id="passportNationality">
+		<label class="form-label-bold label" for="passportNationality" data-label="Nationality">Have you ever changed your name?</label>
+		<p class="eligibility-message">For example, by marriage or deed poll</p>
+
+		<div class="radio-wrapper">
+			<input type="radio" id="changedNameYes" name="changedName" value="Yes" tabindex="1" class="showPreviousName1">
+			<label class="block-label" for="changedNameYes">Yes</label>
+		</div>
+		<div class="radio-wrapper">
+			<input type="radio" id="changedNameNo" name="changedName" value="No" tabindex="2" class="hidePreviousName1">
+			<label class="block-label" for="changedNameNo">No</label>
+		</div>
+	</fieldset>
+	</div>
+
+	<!-- Name 1 -->
+
+	<fieldset class="inline panel-indent" id="previousName1" style="display: none">
+	<div class="form-group">
+		<h2 class="form-label-bold label">What was your previous name? </h2>
+		<p data-lang="eng" class="form-hint">Write your previous name in full, including any parts that haven’t changed</p>
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="first-middle-names">First and middle names</label>
+		<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="last-name">Last name</label>
+		<input type="text" class="form-control" id="last-name" name="last-name" />
+	</div>
+	<div class="form-group">
+	<p><a href="#" class="hidePreviousName1B">Remove this name</a></p>
+	<p><a href="#" class="showPreviousName2">Add another previous name</a></p>
+
+	</div>
+	</fieldset>
+
+	<!-- Name 2 -->
+
+	<fieldset class="inline panel-indent" id="previousName2" style="display: none">
+	<div class="form-group">
+		<h2 class="form-label-bold label">What was your previous name? </h2>
+		<p data-lang="eng" class="form-hint">Write your previous name in full, including any parts that haven’t changed</p>
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="first-middle-names">First and middle names</label>
+		<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="last-name">Last name</label>
+		<input type="text" class="form-control" id="last-name" name="last-name" />
+	</div>
+	<div class="form-group">
+	<p><a href="#" class="hidePreviousName2B">Remove this name</a></p>
+	<p><a href="#" class="showPreviousName3">Add another previous name</a></p>
+	</div>
+	</fieldset>
+
+	<!-- Name 3 -->
+
+	<fieldset class="inline panel-indent" id="previousName3" style="display: none">
+	<div class="form-group">
+		<h2 class="form-label-bold label">What was your previous name? </h2>
+		<p data-lang="eng" class="form-hint">Write your previous name in full, including any parts that haven’t changed</p>
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="first-middle-names">First and middle names</label>
+		<input type="text" class="form-control" id="first-middle-names" name="first-middle-names" />
+	</div>
+
+	<div class="form-group">
+		<label class="form-label-bold small-bold label" for="last-name">Last name</label>
+		<input type="text" class="form-control" id="last-name" name="last-name" />
+	</div>
+	<div class="form-group">
+	<p><a href="#" class="hidePreviousName3B">Remove this name</a></p>
+	</div>
+	</fieldset>
+
+	<div class="form-group">
+		<a class="button" href="finish.html" id="continuebutton">Continue</a>
+	</div>
+
+<!-- STOP DELETING! -->
+
+	</main>
+	<footer data-includefile="footer"></footer>
+</body>
+</html>
